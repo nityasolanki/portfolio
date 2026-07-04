@@ -22,6 +22,23 @@ export const socials = {
   email: `mailto:nityaasolanki@gmail.com`,
 } as const;
 
+/**
+ * The hero headline, as styled segments so the component can split it
+ * into individually animated words while keeping copy out of JSX.
+ * "sans" = Syne, "serif" = Instrument italic, "serif-aurora" = + gradient.
+ */
+export type HeadlineSegment = {
+  text: string;
+  style: "sans" | "serif" | "serif-aurora";
+};
+
+export const heroHeadline: HeadlineSegment[] = [
+  { text: "I build AI systems that", style: "sans" },
+  { text: "think, speak", style: "serif-aurora" },
+  { text: "&", style: "sans" },
+  { text: "retrieve", style: "serif" },
+];
+
 export const marqueeItems = [
   "LLMs",
   "Agentic AI",

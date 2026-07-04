@@ -6,15 +6,19 @@ import type { Variants } from "motion/react";
  */
 export const EASE = [0.22, 1, 0.36, 1] as const;
 
-/** Standard scroll reveal: fade + rise + de-blur ("focuses in"). */
+/**
+ * Standard reveal: fade + rise + de-blur ("focuses in").
+ * `visible` is a function so callers can pass a delay via the
+ * `custom` prop without overriding the shared transition.
+ */
 export const reveal: Variants = {
   hidden: { opacity: 0, y: 24, filter: "blur(6px)" },
-  visible: {
+  visible: (delay: number = 0) => ({
     opacity: 1,
     y: 0,
     filter: "blur(0px)",
-    transition: { duration: 0.7, ease: EASE },
-  },
+    transition: { duration: 0.7, ease: EASE, delay },
+  }),
 };
 
 /** Parent orchestrator: children with `reveal` variants fire 80ms apart. */
