@@ -1,26 +1,134 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+/*
+ * Design tokens — "Iridescent ink".
+ * Every color/font used anywhere on the site is defined here once.
+ * Tailwind v4 turns each token into utilities (bg-ink, text-fg-muted,
+ * font-display, ...), so components never hardcode a hex value.
+ */
+@theme {
+  /* Surfaces */
+  --color-ink: #060509;
+  --color-ink-2: #0c0a12;
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  /* Text tiers */
+  --color-fg: #f4f2f7;
+  --color-fg-muted: #9c97a8;
+  --color-fg-faint: #6e6880;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  /* Iridescent accent ramp: violet → fuchsia → cyan */
+  --color-violet: #8b5cf6;
+  --color-violet-soft: #a78bfa;
+  --color-violet-pale: #e9d5ff;
+  --color-fuchsia: #d946ef;
+  --color-fuchsia-soft: #e879f9;
+  --color-cyan: #22d3ee;
+  --color-cyan-soft: #67e8f9;
+
+  /* Fonts (wired to next/font variables in layout.tsx) */
+  --font-display: var(--font-syne);
+  --font-serif: var(--font-instrument);
+  --font-sans: var(--font-manrope);
+  --font-mono: var(--font-jetbrains);
+
+  /* Motion */
+  --ease-fluid: cubic-bezier(0.22, 1, 0.36, 1);
+  --animate-marquee: marquee 32s linear infinite;
+  --animate-blob: blob-morph 22s ease-in-out infinite;
+  --animate-blob-slow: blob-morph 30s ease-in-out infinite reverse;
+
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+
+  /* Organic morph: the border-radius reshapes like ink in water while
+     the blob slowly drifts. Runs on the compositor — zero JS. */
+  @keyframes blob-morph {
+    0%, 100% {
+      border-radius: 58% 42% 55% 45% / 45% 58% 42% 55%;
+      transform: translate(0, 0) scale(1);
+    }
+    33% {
+      border-radius: 45% 55% 48% 52% / 55% 45% 52% 48%;
+      transform: translate(4%, -3%) scale(1.06);
+    }
+    66% {
+      border-radius: 52% 48% 42% 58% / 48% 52% 58% 42%;
+      transform: translate(-3%, 4%) scale(0.96);
+    }
   }
 }
 
+/* ---------- Base ---------- */
+
+html {
+  scroll-behavior: smooth; /* fallback for anchor jumps when Lenis is off */
+}
+
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-ink);
+  color: var(--color-fg);
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+}
+
+::selection {
+  background: color-mix(in srgb, var(--color-fuchsia) 35%, transparent);
+  color: var(--color-fg);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-cyan);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* Thin, unobtrusive scrollbar that matches the ink theme */
+::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar-track { background: var(--color-ink); }
+::-webkit-scrollbar-thumb {
+  background: #211d2c;
+  border-radius: 8px;
+}
+::-webkit-scrollbar-thumb:hover { background: #322c42; }
+
+/* ---------- Reusable surface recipes ---------- */
+
+/* Glassmorphism: the 1px border + inner highlight is what sells the
+   effect — blur alone just looks foggy. */
+@utility glass {
+  background: rgba(255, 255, 255, 0.035);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  backdrop-filter: blur(14px);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+/* Iridescent text — used only on accent words, never full headlines */
+@utility text-aurora {
+  background: linear-gradient(95deg, var(--color-violet-soft), var(--color-fuchsia-soft), var(--color-cyan));
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+/* Ghost numerals behind sections */
+@utility text-ghost {
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.07);
+}
+
+/* ---------- Accessibility ---------- */
+
+/* CSS-driven animations stop here; JS-driven ones are gated inside the
+   motion components. Both honor the same OS setting. */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }
