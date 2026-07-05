@@ -278,6 +278,6 @@ export const education = [
   },
   {
     title: "Sri Sathya Sai Vidya Vihar",
-    detail: "Schooling (CBSE) · Indore",
+    detail: "CBSE · Indore",
   },
 ] as const;
