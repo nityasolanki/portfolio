@@ -1,17 +1,16 @@
-import { Award, GraduationCap } from "lucide-react";
-import { achievements, certifications } from "@/data/portfolio";
+import { GraduationCap, School } from "lucide-react";
+import { education, certifications } from "@/data/portfolio";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Stagger, StaggerItem } from "@/components/motion/Stagger";
 import { Reveal } from "@/components/motion/Reveal";
 import { Chip } from "@/components/ui/Chip";
 
-const icons = [Award, GraduationCap];
+const icons = [GraduationCap, School];
 
 /*
- * Certifications and achievements merged into one strip: achievements
- * get the weight (glass cards, aurora title), certs read as a compact
- * pill texture — six entry-level certs shouldn't outrank one
- * international olympiad rank.
+ * Education and certifications in one strip: degree and school get
+ * glass cards with aurora titles, certs read as a compact pill
+ * texture beside them — coursework shouldn't outweigh education.
  */
 export function Credentials() {
   return (
@@ -19,26 +18,26 @@ export function Credentials() {
       <div className="mx-auto w-full max-w-5xl px-6">
         <SectionHeading
           number="06"
-          eyebrow="credentials"
-          title="Honors &"
-          accent="learning"
+          eyebrow="education"
+          title="Where I"
+          accent="learned"
         />
 
         <div className="grid gap-10 md:grid-cols-[1fr_1.15fr] md:gap-14">
           <Stagger className="space-y-5">
-            {achievements.map((a, i) => {
+            {education.map((entry, i) => {
               const Icon = icons[i % icons.length];
               return (
                 <StaggerItem
-                  key={a.title}
+                  key={entry.title}
                   className="glass block rounded-2xl rounded-tl-sm p-6"
                 >
                   <Icon size={20} strokeWidth={1.5} className="text-fuchsia-soft" />
                   <p className="text-aurora mt-4 font-display text-xl font-medium">
-                    {a.title}
+                    {entry.title}
                   </p>
                   <p className="mt-1.5 text-sm leading-relaxed text-fg-muted">
-                    {a.detail}
+                    {entry.detail}
                   </p>
                 </StaggerItem>
               );

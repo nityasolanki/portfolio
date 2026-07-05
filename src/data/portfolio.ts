@@ -271,13 +271,13 @@ export const certifications = [
   "Foundations: Data, Data, Everywhere — Google",
 ] as const;
 
-export const achievements = [
-  {
-    title: "International Rank 17",
-    detail: "National Cyber Olympiad (NCO), Level 2",
-  },
+export const education = [
   {
     title: "B.Tech Computer Science",
-    detail: "Medi-Caps University (2021–2025)",
+    detail: "Medicaps University, Indore (2021–2025)",
+  },
+  {
+    title: "Sri Sathya Sai Vidya Vihar",
+    detail: "Schooling (CBSE) — Indore",
   },
 ] as const;
