@@ -17,7 +17,7 @@ export function Credentials() {
     <section id="credentials" className="relative py-28">
       <div className="mx-auto w-full max-w-5xl px-6">
         <SectionHeading
-          number="06"
+          number="05"
           eyebrow="education"
           title="Where I"
           accent="learned"

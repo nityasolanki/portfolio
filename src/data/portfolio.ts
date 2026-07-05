@@ -44,7 +44,6 @@ export const navLinks = [
   { label: "Skills", href: "#skills" },
   { label: "Experience", href: "#experience" },
   { label: "Projects", href: "#projects" },
-  { label: "GitHub", href: "#github" },
   { label: "Education", href: "#credentials" },
 ] as const;
 
@@ -237,37 +236,6 @@ export const projects: Project[] = [
     stack: ["LangChain", "LLaMA", "Scikit-learn", "Plotly", "Streamlit", "Pandas"],
     github: "https://github.com/nityasolanki",
     align: "left",
-  },
-];
-
-export type Repo = {
-  name: string;
-  description: string;
-  language: string;
-  url: string;
-};
-
-export const githubHighlights: Repo[] = [
-  {
-    name: "rag-enterprise-search",
-    description:
-      "Hybrid BM25 + vector search over PDFs with exact page attribution and one-click summarization.",
-    language: "Python",
-    url: "https://github.com/nityasolanki/rag-enterprise-search",
-  },
-  {
-    name: "stock-sentiment-analysis",
-    description:
-      "Stock movement prediction from social-media sentiment signals.",
-    language: "Jupyter Notebook",
-    url: "https://github.com/nityasolanki/stock-sentiment-analysis",
-  },
-  {
-    name: "reddit-threat-monitor",
-    description:
-      "Real-time monitoring of cyber-threat keywords across Reddit with a Streamlit dashboard.",
-    language: "Python",
-    url: "https://github.com/nityasolanki/reddit-threat-monitor",
   },
 ];
 

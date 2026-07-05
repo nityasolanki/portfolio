@@ -18,7 +18,7 @@ export function Contact() {
           aria-hidden
           className="text-ghost pointer-events-none absolute -top-10 right-6 select-none font-display text-[6rem] leading-none sm:text-[7.5rem]"
         >
-          07
+          06
         </span>
 
         <Stagger>
