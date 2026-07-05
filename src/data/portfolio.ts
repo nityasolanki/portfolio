@@ -151,7 +151,7 @@ export const experience: Experience[] = [
   },
   {
     company: "OneHash",
-    role: "Founder's Office Intern",
+    role: "Founder's Office",
     period: "Jan 2025 — May 2025",
     bullets: [
       "Investor research, competitor benchmarking and market analysis supporting fundraising decisions.",
