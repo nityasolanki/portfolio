@@ -1,4 +1,4 @@
-import { person, socials } from "@/data/portfolio";
+import { socials } from "@/data/portfolio";
 import { AuroraBlobs } from "@/components/effects/AuroraBlobs";
 import { Stagger, StaggerItem } from "@/components/motion/Stagger";
 import { GradientButton } from "@/components/ui/GradientButton";
@@ -38,12 +38,6 @@ export function Contact() {
 
           <StaggerItem className="mt-11 flex flex-col items-center gap-6">
             <GradientButton href={socials.email}>say hello</GradientButton>
-            <a
-              href={socials.email}
-              className="font-mono text-sm text-fg-muted transition-colors duration-300 hover:text-fg"
-            >
-              {person.email}
-            </a>
             <SocialLinks />
           </StaggerItem>
         </Stagger>

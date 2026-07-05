@@ -13,7 +13,6 @@ export const person = {
   email: "nityaasolanki@gmail.com",
   tagline:
     "Working across LLM applications, agentic workflows, RAG pipelines and real-time voice AI — shipping production systems end to end.",
-  availability: "Open to AI & forward-deployed roles",
 } as const;
 
 export const socials = {

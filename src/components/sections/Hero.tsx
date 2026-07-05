@@ -30,15 +30,7 @@ export function Hero() {
 
       <div className="mx-auto flex w-full max-w-5xl flex-1 flex-col justify-center px-6 pt-28 pb-20">
         <Stagger mode="load">
-          <StaggerItem className="inline-flex items-center gap-2.5 rounded-full border border-cyan/25 bg-cyan/[0.07] px-4 py-1.5 font-mono text-xs text-cyan-soft">
-            <span className="relative flex h-1.5 w-1.5">
-              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-cyan opacity-60" />
-              <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-cyan" />
-            </span>
-            {person.availability}
-          </StaggerItem>
-
-          <StaggerItem className="mt-8 block font-mono text-xs tracking-[0.14em] text-fg-muted">
+          <StaggerItem className="block font-mono text-xs tracking-[0.14em] text-fg-muted">
             hi, i&apos;m {person.firstName} — {person.role.toLowerCase()}
           </StaggerItem>
 
