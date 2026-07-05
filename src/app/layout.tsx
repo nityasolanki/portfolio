@@ -39,6 +39,7 @@ const jetbrains = JetBrains_Mono({
  * searching it find the site; visible headings use the first name only.
  */
 export const metadata: Metadata = {
+  metadataBase: new URL("https://nityasolanki.vercel.app"),
   title: `${person.fullName} — ${person.role}`,
   description:
     "AI engineer building LLM applications, agentic workflows, RAG pipelines and real-time voice AI. LangGraph, FastAPI, Qdrant, Deepgram.",
@@ -57,6 +58,13 @@ export const metadata: Metadata = {
     description:
       "AI engineer building agentic systems, RAG pipelines and real-time voice AI.",
     type: "website",
+    url: "/",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: `${person.fullName} — ${person.role}`,
+    description:
+      "AI engineer building agentic systems, RAG pipelines and real-time voice AI.",
   },
 };
 
