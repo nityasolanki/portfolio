@@ -39,6 +39,15 @@ export const heroHeadline: HeadlineSegment[] = [
   { text: "retrieve", style: "serif" },
 ];
 
+export const navLinks = [
+  { label: "About", href: "#about" },
+  { label: "Skills", href: "#skills" },
+  { label: "Experience", href: "#experience" },
+  { label: "Projects", href: "#projects" },
+  { label: "GitHub", href: "#github" },
+  { label: "Education", href: "#credentials" },
+] as const;
+
 export const marqueeItems = [
   "LLMs",
   "Agentic AI",

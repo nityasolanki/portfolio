@@ -5,17 +5,28 @@ import { Experience } from "@/components/sections/Experience";
 import { Projects } from "@/components/sections/Projects";
 import { GithubHighlights } from "@/components/sections/GithubHighlights";
 import { Credentials } from "@/components/sections/Credentials";
+import { Contact } from "@/components/sections/Contact";
+import { Navbar } from "@/components/layout/Navbar";
+import { Footer } from "@/components/layout/Footer";
+import { Marquee } from "@/components/motion/Marquee";
+import { marqueeItems } from "@/data/portfolio";
 
 export default function Home() {
   return (
-    <main className="relative">
-      <Hero />
-      <About />
-      <Skills />
-      <Experience />
-      <Projects />
-      <GithubHighlights />
-      <Credentials />
-    </main>
+    <>
+      <Navbar />
+      <main className="relative">
+        <Hero />
+        <About />
+        <Skills />
+        <Experience />
+        <Projects />
+        <GithubHighlights />
+        <Credentials />
+        <Marquee items={marqueeItems} />
+        <Contact />
+      </main>
+      <Footer />
+    </>
   );
 }
