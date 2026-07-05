@@ -12,8 +12,8 @@ export const person = {
   location: "Indore, India",
   email: "nityaasolanki@gmail.com",
   tagline:
-    "Working across LLM applications, agentic workflows, RAG pipelines and real-time voice AI — from model to production API.",
-  availability: "Open to AI engineer roles",
+    "Working across LLM applications, agentic workflows, RAG pipelines and real-time voice AI — shipping production systems end to end.",
+  availability: "Open to AI & forward-deployed roles",
 } as const;
 
 export const socials = {
@@ -52,13 +52,13 @@ export const marqueeItems = [
 export const about = {
   paragraphs: [
     "I'm a computer science graduate who fell for the part of AI where models stop being demos and start doing real work — agents that answer live phone calls, retrieval pipelines that cite their sources, tools that chain themselves together.",
-    "Right now I'm an AI/ML intern at Linkites Infotech, building production LLM applications end to end: FastAPI backends, Qdrant vector stores, LangGraph orchestration, Dockerized deployments.",
-    "Before engineering, a founder's-office stint taught me to break ambiguous problems into plans — a habit that turns out to matter as much in agent design as in strategy.",
+    "Most recently I built production AI at Linkites Infotech — LLM applications end to end: FastAPI backends, Qdrant vector stores, LangGraph orchestration, Dockerized deployments.",
+    "Before engineering, a founder's-office stint taught me to break ambiguous problems into plans and to work directly with the people who own them — habits that matter as much in the field as in the codebase.",
   ],
   facts: [
     { label: "Based in", value: "Indore, India" },
-    { label: "Degree", value: "B.Tech CSE, 8.2 CGPA" },
-    { label: "Currently", value: "AI/ML Intern @ Linkites" },
+    { label: "Degree", value: "B.Tech Computer Science" },
+    { label: "Recently", value: "AI/ML @ Linkites" },
     { label: "Focus", value: "Agents · RAG · Voice AI" },
   ],
 } as const;
@@ -142,10 +142,10 @@ export type Experience = {
 export const experience: Experience[] = [
   {
     company: "Linkites Infotech",
-    role: "AI/ML Intern",
-    period: "Mar 2026 — Present",
+    role: "AI/ML",
+    period: "2026",
     bullets: [
-      "Building production AI apps with LLMs, RAG pipelines and LangGraph agentic workflows.",
+      "Built production AI apps with LLMs, RAG pipelines and LangGraph agentic workflows.",
       "Built and optimized a PDF-based RAG system (FastAPI, Qdrant, Groq, LangGraph) with semantic chunking and cross-document retrieval.",
       "Designed an AI voice support agent with Deepgram STT/TTS, Twilio and Groq — scalable backend on FastAPI, PostgreSQL and Docker.",
     ],
@@ -278,7 +278,7 @@ export const achievements = [
     detail: "National Cyber Olympiad (NCO), Level 2",
   },
   {
-    title: "8.2 CGPA",
-    detail: "B.Tech Computer Science, Medi-Caps University (2021–2025)",
+    title: "B.Tech Computer Science",
+    detail: "Medi-Caps University (2021–2025)",
   },
 ] as const;
