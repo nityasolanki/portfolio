@@ -16,9 +16,9 @@ export function About() {
 
         <div className="grid gap-12 md:grid-cols-[1.4fr_1fr] md:gap-16">
           <Stagger className="space-y-5">
-            {about.paragraphs.map((p) => (
+            {about.paragraphs.map((p, i) => (
               <StaggerItem
-                key={p.slice(0, 24)}
+                key={i}
                 className="block leading-relaxed text-fg-muted"
               >
                 {p}

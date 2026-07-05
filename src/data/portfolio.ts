@@ -56,7 +56,6 @@ export const about = {
     "Before engineering, a founder's-office stint taught me to break ambiguous problems into plans and to work directly with the people who own them — habits that matter as much in the field as in the codebase.",
   ],
   facts: [
-    { label: "Based in", value: "Indore, India" },
     { label: "Degree", value: "B.Tech Computer Science" },
     { label: "Recently", value: "AI/ML @ Linkites" },
     { label: "Focus", value: "Agents · RAG · Voice AI" },
