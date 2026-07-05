@@ -29,7 +29,7 @@ export function Credentials() {
               const Icon = icons[i % icons.length];
               return (
                 <StaggerItem
-                  key={entry.title}
+                  key={i}
                   className="glass block rounded-2xl rounded-tl-sm p-6"
                 >
                   <Icon size={20} strokeWidth={1.5} className="text-fuchsia-soft" />

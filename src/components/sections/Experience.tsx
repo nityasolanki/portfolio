@@ -26,8 +26,8 @@ export function Experience() {
           />
 
           <Stagger className="space-y-14">
-            {experience.map((job) => (
-              <StaggerItem key={job.company} className="relative block pl-10">
+            {experience.map((job, i) => (
+              <StaggerItem key={i} className="relative block pl-10">
                 <span
                   aria-hidden
                   className="absolute -left-[4.5px] top-2 h-2.5 w-2.5 rounded-full bg-gradient-to-br from-violet to-fuchsia shadow-[0_0_12px_rgba(217,70,239,0.55)]"

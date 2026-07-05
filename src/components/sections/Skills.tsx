@@ -32,7 +32,7 @@ export function Skills() {
         <Stagger className="grid gap-5 md:grid-cols-6">
           {skillGroups.map((group, i) => (
             <StaggerItem
-              key={group.title}
+              key={i}
               className={cn(
                 "glass group relative block overflow-hidden rounded-2xl p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_0_32px_rgba(139,92,246,0.14)]",
                 layout[i].span,

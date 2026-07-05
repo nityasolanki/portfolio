@@ -26,8 +26,8 @@ export function GithubHighlights() {
         />
 
         <Stagger className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {githubHighlights.map((repo) => (
-            <StaggerItem key={repo.name} className="block">
+          {githubHighlights.map((repo, i) => (
+            <StaggerItem key={i} className="block">
               <a
                 href={repo.url}
                 target="_blank"

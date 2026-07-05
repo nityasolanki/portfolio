@@ -273,11 +273,11 @@ export const certifications = [
 
 export const education = [
   {
-    title: "B.Tech Computer Science",
-    detail: "Medicaps University, Indore (2021–2025)",
+    title: "Medicaps University",
+    detail: "B.Tech Computer Science · 2021–2025",
   },
   {
     title: "Sri Sathya Sai Vidya Vihar",
-    detail: "Schooling (CBSE) — Indore",
+    detail: "Schooling (CBSE) · Indore",
   },
 ] as const;
