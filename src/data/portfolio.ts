@@ -64,7 +64,7 @@ export const about = {
   ],
   facts: [
     { label: "Degree", value: "B.Tech Computer Science" },
-    { label: "Recently", value: "AI/ML @ Linkites" },
+    { label: "Recently", value: "AI @ Linkites" },
     { label: "Focus", value: "Agents · RAG · Voice AI" },
   ],
 } as const;
@@ -148,8 +148,8 @@ export type Experience = {
 export const experience: Experience[] = [
   {
     company: "Linkites Infotech",
-    role: "AI/ML",
-    period: "2026",
+    role: "AI",
+    period: "Mar 2026 — Jun 2026",
     bullets: [
       "Built production AI apps with LLMs, RAG pipelines and LangGraph agentic workflows.",
       "Built and optimized a PDF-based RAG system (FastAPI, Qdrant, Groq, LangGraph) with semantic chunking and cross-document retrieval.",
