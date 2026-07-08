@@ -40,7 +40,7 @@ const jetbrains = JetBrains_Mono({
  */
 export const metadata: Metadata = {
   metadataBase: new URL("https://nityasolanki.vercel.app"),
-  title: `${person.fullName} | ${person.role}`,
+  title: person.fullName,
   description:
     "AI engineer building LLM applications, agentic workflows, RAG pipelines and real-time voice AI. LangGraph, FastAPI, Qdrant, Deepgram.",
   keywords: [
@@ -54,7 +54,7 @@ export const metadata: Metadata = {
     person.fullName,
   ],
   openGraph: {
-    title: `${person.fullName} | ${person.role}`,
+    title: person.fullName,
     description:
       "AI engineer building agentic systems, RAG pipelines and real-time voice AI.",
     type: "website",
@@ -62,7 +62,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: `${person.fullName} | ${person.role}`,
+    title: person.fullName,
     description:
       "AI engineer building agentic systems, RAG pipelines and real-time voice AI.",
   },
